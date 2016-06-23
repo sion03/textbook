@@ -64,13 +64,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     void setMemoList(){
-        List<MemoDB> memoList = new Select().from(MemoDB.class).execute();
-        ArrayAdapter<MemoDB> adapter = new ArrayAdapter<>(
-            getApplicationContext(),
-            R.layout.memo_row,
-            memoList
-        );
-        mListView.setAdapter(adapter);
+        //埋めてね
     }
 
     @Override
