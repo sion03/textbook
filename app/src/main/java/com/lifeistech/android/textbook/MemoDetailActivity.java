@@ -16,37 +16,22 @@ import java.util.Locale;
 
 public class MemoDetailActivity extends AppCompatActivity {
 
-    MemoDB mMemoDB;
-    EditText mTitle;
-    EditText mMemo;
-
+    //埋めてね
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_memo_detail);
 
-        mTitle = (EditText) findViewById(R.id.detail_title);
-        mMemo = (EditText) findViewById(R.id.detail_memo);
-        setMemo();
+        //埋めてね
     }
 
     void setMemo() {
-        Intent i = getIntent();
-        List<MemoDB>memoList = new Select().from(MemoDB.class).where("date=?",i.getStringExtra("data")).execute();
-        mMemoDB = memoList.get(0);
-        mTitle.setText(mMemoDB.title);
-        mMemo.setText(mMemoDB.memo);
+        //埋めてね
     }
 
     void updateMemo(){
-        mMemoDB.title = mTitle.getText().toString();
-        mMemoDB.memo = mMemo.getText().toString();
-        Date date = new Date();
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.JAPANESE);
-        mMemoDB.date = sdf.format(date);
-        mMemoDB.save();
-
+        //埋めてね
     }
 
     @Override
@@ -61,10 +46,7 @@ public class MemoDetailActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if (R.id.detail_save == id){
-            updateMemo();
-            finish();
-
-            return true;
+            //埋めてね
         }
 
         return super.onOptionsItemSelected(item);

@@ -10,22 +10,23 @@
     tools:context="com.lifeistech.android.textbook.MemoCreateActivity">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         android:weightSum="1">
 
         <EditText
+            android:id="@+id/create_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/create_title"
             android:hint="タイトル" />
 
         <EditText
+            android:id="@+id/create_memo"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/create_memo"
             android:layout_weight="1.06"
+            android:gravity="left|top"
             android:hint="メモ" />
     </LinearLayout>
 </RelativeLayout>

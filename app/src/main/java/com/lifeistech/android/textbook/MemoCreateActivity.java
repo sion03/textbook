@@ -12,18 +12,12 @@ import java.util.Locale;
 
 public class MemoCreateActivity extends AppCompatActivity {
 
-    MemoDB mMemoDB;
-    EditText mTitle;
-    EditText mMemo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_memo_create);
 
-        mTitle = (EditText) findViewById(R.id.create_title);
-        mMemo = (EditText) findViewById(R.id.create_memo);
-        mMemoDB = new MemoDB();
     }
 
     @Override
@@ -31,6 +25,8 @@ public class MemoCreateActivity extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_memo_create, menu);
         return true;
+
+
     }
 
     @Override
@@ -52,12 +48,8 @@ public class MemoCreateActivity extends AppCompatActivity {
     }
 
     void saveMemo(){
-        mMemoDB.title = mTitle.getText().toString();
-        mMemoDB.memo = mMemo.getText().toString();
-        Date date = new Date();
-        SimpleDateFormat sdf= new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.JAPANESE);
-        mMemoDB.date = sdf.format(date);
-        mMemoDB.save();
+
+
     }
 
 }
